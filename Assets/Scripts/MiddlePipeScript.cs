@@ -5,10 +5,12 @@ using UnityEngine;
 public class MiddlePipeScript : MonoBehaviour
 {
     public LogicScript logic;
+    MusicManager musicManager;
     // Start is called before the first frame update
     void Start()
     {
-        logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();  
+        musicManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<MusicManager>();
+        logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
     }
 
     // Update is called once per frame
@@ -22,6 +24,7 @@ public class MiddlePipeScript : MonoBehaviour
         if(collision.gameObject.layer == 3)
         {
             logic.updateScore(1);
+            musicManager.PlaySFX(musicManager.point);
         }
     }
 }
