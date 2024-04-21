@@ -1,6 +1,7 @@
-# Flappy Bus (Đang phát triển)
+# Flappy Bus (Developing)
 
-Trò chơi được trình bày theo phong cách **side-scroller** (phong cách game với các đối tượng được nhìn thấy ở mặt bên (side-view)
-và di chuyển từ cạnh trái sang cạnh phải của màn hình), trong đó người chơi điều khiển một chiếc xe, cố gắng vượt qua các chướng ngại trên đường mà không chạm vào chúng.
+## Publish: https://lehungtin11.itch.io/flappy-bus
+
+This game is presented in a side-scroller style, where the player controls a vehicle and attempts to navigate past obstacles on the path without colliding with them. The gameplay features a side-view perspective, with objects moving from the left to the right of the screen.
 
 ![preview img](/flappyBusScreen.png)
