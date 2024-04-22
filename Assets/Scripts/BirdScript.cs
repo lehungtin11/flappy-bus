@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BirdScript : MonoBehaviour
 {
     public Rigidbody2D myBody;
-    public int velocity = 10;
+    private int velocity = 15;
     public LogicScript logic;
     private bool isBirdAlive = true;
     MusicManager musicManager;
@@ -20,8 +21,7 @@ public class BirdScript : MonoBehaviour
     void Update()
     {
         // Flap Event
-        if(Input.GetKeyDown(KeyCode.Space) && isBirdAlive && !logic.isPause)
-        {
+        if((Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown((int)MouseButton.Left)) && isBirdAlive && !logic.isPause) {
             myBody.velocity = Vector2.up * velocity;
             musicManager.PlaySFX(musicManager.flap);
         }
@@ -43,5 +43,10 @@ public class BirdScript : MonoBehaviour
             logic.gameOverScreen();
             musicManager.PlaySFX(musicManager.hit);
         }
+    }
+
+    public bool getBirdStatus()
+    {
+        return isBirdAlive;
     }
 }

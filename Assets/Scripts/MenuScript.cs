@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class MenuScript : MonoBehaviour
 {
-    public GameObject optionObject;
+    public GameObject alertObject;
 
     public void startGame()
     {
@@ -26,5 +26,10 @@ public class MenuScript : MonoBehaviour
     public void closePopup(GameObject gameObject)
     {
         gameObject.SetActive(false);
+    }
+
+    public void multiplayer()
+    {
+        alertObject.SetActive(true);
     }
 }
