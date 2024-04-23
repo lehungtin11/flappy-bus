@@ -1,4 +1,4 @@
-# Flappy Bus (Developing)
+# Flappy Bus (Developing Multiplayer)
 
 ## Publish: https://lehungtin11.itch.io/flappy-bus
 
